@@ -1,16 +1,14 @@
-def main():
-	multiples_sum_3 = multiples_sum(3,10)
-	multiples_sum_5 = multiples_sum(5,10) 
-
-	sum_3_5 = multiples_sum_3 + multiples_sum_5
+def main(): 
+	sum_3_5 = multiples_sum()
 
 	print(sum_3_5)
 
-def multiples_sum(x,n):
+def multiples_sum():
 	sum = 0
 
-	for i in range(0,n,x):
-    sum += i
+	for i in range(1000):
+		if(i%3==0) or (i%5==0):
+    			sum += i
 
 	return sum
 
