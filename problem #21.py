@@ -20,10 +20,11 @@ class Solution:
             if sum2==1:
                 continue
 
-            if sum1==sum2:
+            if i==sum2 and i!=sum1:
+                
                 sum_amicable += sum1+sum2
 
-        return sum_amicable
+        return sum_amicable//2
 
 
 def main():
