@@ -57,7 +57,7 @@ class Solution:
 
 def main():
     x = Solution()
-    y = x.circular_prime(100)
+    y = x.circular_prime(1000000)
     print(y)
 
 if __name__ == '__main__':
