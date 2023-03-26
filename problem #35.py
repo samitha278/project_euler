@@ -24,17 +24,17 @@ class Solution:
                 circular_prime_list.append(i)
                 continue
             
-            elif (i<100):
+            if (i in circular_prime_list):
+                continue
+            
+            if (i<100):
                 str_rev_i = str(i)[::-1]
                 rev_i = int(str_rev_i)
                 if self.isPrime(rev_i):
-                    circular_prime_list.extend([i,rev_i])
-                    continue
-                else:
-                    continue
-                    
-                    
-            if (i in circular_prime_list):
+                    if (i == rev_i):
+                        circular_prime_list.append(i)
+                    else:    
+                        circular_prime_list.extend([i,rev_i])
                 continue
              
             str_i = str(i)
