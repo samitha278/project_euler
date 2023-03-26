@@ -10,9 +10,12 @@ class Solution:
     
     def iter(self,limit):
 
-        sum_amicable = 0
+        set_amicable = []
 
         for i in range(2,limit):
+            
+            if i in set_amicable:
+                continue
             sum1 = self.sum_factors(i)
             if sum1==1:
                 continue
@@ -21,10 +24,10 @@ class Solution:
                 continue
 
             if i==sum2 and i!=sum1:
-                
-                sum_amicable += sum1+sum2
+                amicable = [i,sum1]
+                set_amicable+=amicable
 
-        return sum_amicable//2
+        return sum(set_amicable)
 
 
 def main():
